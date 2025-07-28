@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Healthcare</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,fr,de,es,ru,zh-CN,ja,ko,it,pt,ar,bn,pa,gu,mr,ta,te,ur,ml,id,th,tr,fa,pl,uk,vi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="font-sans">
+     <!-- Topbar Start -->
+     <div class="hidden lg:block bg-white border-b py-2">
+        <div class="container mx-auto px-4 flex justify-between">
+            <div class="flex items-center space-x-3">
+                <a class="text-gray-700 flex items-center" href="#"><i class="fa fa-heartbeat mr-2"></i>YOUR PERSONAL DOCTOR</a>
+                <span class="text-gray-700"></span>
+                <a class="text-gray-700 flex items-center" href="#"></a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a class="text-gray-700" href="https://www.facebook.com/siddarth.saxena.7967/"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-gray-700" href="https://twitter.com/Siddhar77817838"><i class="fab fa-twitter"></i></a>
+                <a class="text-gray-700" href="https://www.linkedin.com/in/divyansh-saxena-326456252/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-gray-700" href="https://www.instagram.com/realworld_webcam/"><i class="fab fa-instagram"></i></a>
+                <a class="text-gray-700" href="https://www.youtube.com/channel/UCNYZV0fNd0dizu1p1Gkn3pA"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- navbar -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-primary text-2xl font-bold flex items-center">
+                <i class="fa fa-heartbeat mr-2"></i> PredictiCare
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="{{ url_for('home') }}" class="hover:text-primary font-bold">Home</a>
+                <a href="{{ url_for('disease') }}" class="hover:text-primary font-bold">Diseases</a>
+                <a href="{{ url_for('about') }}" class="hover:text-primary font-bold">Our Team</a>
+                <a href="{{ url_for('contact') }}" class="hover:text-primary font-bold">Contact</a>
+            </div>
+            <div id="google_translate_element" class="text-sm"></div>
+        </div>
+    </nav>
+    <!-- Disease Gallery Section -->
+    <section id="disease-gallery" class="py-16 bg-white text-center">
+        <div class="container mx-auto px-4">
+            <div id="google_translate_element" class="mb-4 text-right"></div>
+            <h2 class="text-4xl font-bold mb-6 text-primary">You Can Overcome These Diseases</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">With the right diagnosis and support, recovery is possible. Stay hopeful, stay informed, and know you're not alone.</p>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Disease Cards -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/OIP.jpeg?raw=true" alt="Flu" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Influenza (Flu)</h3>
+                        <p class="text-sm text-gray-600 mt-2">Rest, hydration, and time heal well.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/cold.jpeg?raw=true" alt="Cold" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Common Cold</h3>
+                        <p class="text-sm text-gray-600 mt-2">Warmth and love help you heal.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/covid19.jpeg?raw=true" alt="COVID-19" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">COVID-19</h3>
+                        <p class="text-sm text-gray-600 mt-2">Proper care brings full recovery.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/diabetese.jpeg?raw=true" alt="Diabetes" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Diabetes</h3>
+                        <p class="text-sm text-gray-600 mt-2">Manageable with lifestyle and support.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/asthama.jpeg?raw=true" alt="Asthma" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Asthma</h3>
+                        <p class="text-sm text-gray-600 mt-2">With inhalers and care, you breathe easy.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/hypertension.jpeg?raw=true" alt="Hypertension" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Hypertension</h3>
+                        <p class="text-sm text-gray-600 mt-2">Stay calm, eat well, and thrive.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/migrane.jpeg?raw=true" alt="Migraine" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Migraine</h3>
+                        <p class="text-sm text-gray-600 mt-2">Relief is possible. Seek support.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/depression.jpeg?raw=true" alt="Depression" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Depression</h3>
+                        <p class="text-sm text-gray-600 mt-2">You are not alone. Healing is near.</p>
+                    </div>
+                </div>
+                <!-- <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://source.unsplash.com/300x200/?anxiety" alt="Anxiety" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-primary">Anxiety</h3>
+                        <p class="text-sm text-gray-600 mt-2">You are stronger than your fears.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Predict Disease Button Section -->
+        <div class="text-center my-10">
+            <a href="{{ url_for('index') }}">
+                <button class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                    Predict disease
+                </button>
+            </a>
+        </div>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-2">About Us</h3>
+            <p class="text-sm max-w-xl mx-auto">We are dedicated to providing accurate disease detection tools and promoting health awareness. Our team of experts is committed to helping you take control of your health with compassion and care.</p>
+            <div class="mt-4">
+                <p class="text-xs">&copy; 2025 Disease Detection System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

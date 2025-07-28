@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <form 
+    action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" 
+    method="POST"
+    class="bg-white p-8 rounded-2xl shadow-md w-full max-w-sm"
+  >
+    <h2 class="text-2xl font-bold mb-6 text-center">Sign Up</h2>
+
+    <label class="block mb-4">
+      <span class="text-gray-700">Full Name</span>
+      <input 
+        type="text" 
+        name="name" 
+        required 
+        class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring focus:ring-blue-200"
+      />
+    </label>
+
+    <label class="block mb-4">
+      <span class="text-gray-700">Email</span>
+      <input 
+        type="email" 
+        name="email" 
+        required 
+        class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring focus:ring-blue-200"
+      />
+    </label>
+
+    <label class="block mb-6">
+      <span class="text-gray-700">Password</span>
+      <input 
+        type="password" 
+        name="password" 
+        required 
+        class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring focus:ring-blue-200"
+      />
+    </label>
+
+    <button 
+      type="submit"
+      class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-xl"
+    >
+      Sign Up
+    </button>
+  </form>
+</body>
+</html>

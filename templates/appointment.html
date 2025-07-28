@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Appointment</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,fr,de,es,ru,zh-CN,ja,ko,it,pt,ar,bn,pa,gu,mr,ta,te,ur,ml,id,th,tr,fa,pl,uk,vi',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- i18next -->
+  <script src="https://unpkg.com/i18next@22.4.9/dist/umd/i18next.min.js"></script>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+  <!-- Topbar -->
+  <div class="hidden lg:block bg-white border-b py-2">
+    <div class="container mx-auto px-4 flex justify-between">
+      <div class="flex items-center space-x-3">
+        <a class="text-gray-700 font-semibold" href="#"><i class="fa fa-heartbeat mr-2"></i>YOUR PERSONAL DOCTOR</a>
+      </div>
+      <div class="flex items-center space-x-3 text-lg">
+        <a class="text-gray-700" href="https://www.facebook.com/siddarth.saxena.7967/"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-gray-700" href="https://twitter.com/Siddhar77817838"><i class="fab fa-twitter"></i></a>
+        <a class="text-gray-700" href="https://www.linkedin.com/in/divyansh-saxena-326456252/"><i class="fab fa-linkedin-in"></i></a>
+        <a class="text-gray-700" href="https://www.instagram.com/realworld_webcam/"><i class="fab fa-instagram"></i></a>
+        <a class="text-gray-700" href="https://www.youtube.com/channel/UCNYZV0fNd0dizu1p1Gkn3pA"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-primary text-2xl font-bold flex items-center">
+        <i class="fa fa-heartbeat mr-2"></i> Appointment
+      </a>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="{{ url_for('home') }}" class="hover:text-blue-600 font-bold">Home</a>
+        <a href="{{ url_for('disease') }}" class="hover:text-blue-600 font-bold">Diseases</a>
+        <a href="{{ url_for('about') }}" class="hover:text-blue-600 font-bold">About Us</a>
+        <a href="{{ url_for('contact') }}" class="hover:text-blue-600 font-bold">Contact</a>
+      </div>
+      <div id="google_translate_element" class="text-sm"></div>
+    </div>
+  </nav>
+
+  <!-- Appointment Section -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center px-4">
+      <div>
+        <h2 class="text-sm text-blue-600 uppercase font-bold mb-2" data-i18n="appointment">Appointment</h2>
+        <h1 class="text-4xl font-bold mb-4" data-i18n="title">Make An Appointment For Your Family</h1>
+        <p class="mb-6 text-gray-600" data-i18n="description">Now here you can do appointment in a easy way</p>
+        <a href="./doctor.html" class="bg-blue-600 text-white px-6 py-2 rounded-full mr-4" data-i18n="find_doctor">Find Doctor</a>
+        <a href="blog.html" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full" data-i18n="read_more">Read More</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-4 text-center" data-i18n="book_appointment">Book An Appointment</h2>
+        <form action="https://formspree.io/f/xzzejory" method="post" class="space-y-4">
+          <select id="departmentSelect" name="department" class="w-full border border-gray-300 p-3 rounded" required>
+            <option value="">Choose Department</option>
+            <option value="Cardiologists">Cardiologists</option>
+            <option value="Dermatologists">Dermatologists</option>
+            <option value="General Physician">General Physician</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Orthopod">Orthopod</option>
+            <option value="Pediatricians">Pediatricians</option>
+            <option value="Psychiatrists">Psychiatrists</option>
+            <option value="Gynecologists">Gynecologists</option>
+            <option value="Oncologists">Oncologists</option>
+            <option value="Endocrinologists">Endocrinologists</option>
+            <option value="Gastroenterologists">Gastroenterologists</option>
+            <option value="Pulmonologists">Pulmonologists</option>
+            <option value="Urologists">Urologists</option>
+            <option value="Ophthalmologists">Ophthalmologists</option>
+            <option value="ENT Specialists">ENT Specialists</option>
+            <option value="Nephrologists">Nephrologists</option>
+          </select>
+
+          <select id="doctorSelect" name="doctor" class="w-full border border-gray-300 p-3 rounded" required>
+            <option value="">Select Doctor</option>
+          </select>
+
+          <input type="text" name="name" placeholder="Your Name" class="w-full border border-gray-300 p-3 rounded" required>
+          <input type="email" name="email" placeholder="Your Email" class="w-full border border-gray-300 p-3 rounded" required>
+          <input type="date" name="date" class="w-full border border-gray-300 p-3 rounded" required>
+          <input type="time" name="time" class="w-full border border-gray-300 p-3 rounded" required>
+
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded" data-i18n="make_appointment">Make An Appointment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 mt-10">
+    <div class="max-w-7xl mx-auto flex justify-between px-4 text-sm">
+      <p>&copy; <a href="#" class="text-blue-400">TEAM AI_AVENGER</a>. All Rights Reserved.</p>
+      <p>Designed by <a href="#" class="text-blue-400">TEAM AI_AVENGER</a></p>
+    </div>
+  </footer>
+
+  <!-- Dynamic Doctor Script -->
+  <script>
+    const doctorsByDepartment = {
+      "Cardiologists": ["Dr. A. Sharma", "Dr. R. Mehta"],
+      "Dermatologists": ["Dr. N. Kaur", "Dr. T. Roy"],
+      "General Physician": ["Dr. S. Kumar", "Dr. M. Iqbal"],
+      "Neurologist": ["Dr. B. Sinha", "Dr. L. Bose"],
+      "Orthopod": ["Dr. Y. Verma", "Dr. C. Das"],
+      "Pediatricians": ["Dr. H. Singh", "Dr. R. Joshi"],
+      "Psychiatrists": ["Dr. D. Patil", "Dr. P. Nair"],
+      "Gynecologists": ["Dr. J. Sen", "Dr. G. Thomas"],
+      "Oncologists": ["Dr. F. Mukherjee", "Dr. V. D'Souza"],
+      "Endocrinologists": ["Dr. R. Kulkarni", "Dr. K. Mahajan"],
+      "Gastroenterologists": ["Dr. T. Kapoor", "Dr. A. Kaul"],
+      "Pulmonologists": ["Dr. Z. Ahmed", "Dr. X. Fernandes"],
+      "Urologists": ["Dr. C. Mishra", "Dr. B. Rana"],
+      "Ophthalmologists": ["Dr. W. George", "Dr. U. Reddy"],
+      "ENT Specialists": ["Dr. N. Saxena", "Dr. D. Batra"],
+      "Nephrologists": ["Dr. K. Prasad", "Dr. S. Jain"]
+    };
+
+    const departmentSelect = document.getElementById("departmentSelect");
+    const doctorSelect = document.getElementById("doctorSelect");
+
+    departmentSelect.addEventListener("change", function () {
+      const selected = this.value;
+      doctorSelect.innerHTML = `<option value="">Select Doctor</option>`;
+      if (doctorsByDepartment[selected]) {
+        doctorsByDepartment[selected].forEach(doctor => {
+          const option = document.createElement("option");
+          option.value = doctor;
+          option.textContent = doctor;
+          doctorSelect.appendChild(option);
+        });
+      }
+    });
+  </script>
+
+  <!-- i18next Translations -->
+  <script>
+    const resources = {
+      en: {
+        translation: {
+          appointment: "Appointment",
+          title: "Make An Appointment For Your Family",
+          description: "Now here you can do appointment in a easy way",
+          find_doctor: "Find Doctor",
+          read_more: "Read More",
+          book_appointment: "Book An Appointment",
+          make_appointment: "Make An Appointment"
+        }
+      },
+      hi: {
+        translation: {
+          appointment: "नियुक्ति",
+          title: "अपने परिवार के लिए नियुक्ति करें",
+          description: "अब आप यहाँ आसानी से नियुक्ति कर सकते हैं",
+          find_doctor: "डॉक्टर खोजें",
+          read_more: "और पढ़ें",
+          book_appointment: "नियुक्ति बुक करें",
+          make_appointment: "नियुक्ति करें"
+        }
+      }
+    };
+
+    i18next.init({
+      lng: 'en',
+      debug: true,
+      resources
+    }, () => {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        el.textContent = i18next.t(el.getAttribute('data-i18n'));
+      });
+    });
+  </script>
+
+</body>
+</html>

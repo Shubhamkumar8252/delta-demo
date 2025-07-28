@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Why Choose Us - AI Disease Detection</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,fr,de,es,ru,zh-CN,ja,ko,it,pt,ar,bn,pa,gu,mr,ta,te,ur,ml,id,th,tr,fa,pl,uk,vi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="font-sans">
+    <!-- Topbar Start -->
+    <div class="hidden lg:block bg-white border-b py-2">
+        <div class="container mx-auto px-4 flex justify-between">
+            <div class="flex items-center space-x-3">
+                <a class="text-gray-700 hover:text-primary flex items-center" href="#"> <i class="fa fa-heartbeat mr-2"></i>YOUR PERSONAL DOCTOR</a>
+                <span class="text-gray-700"></span>
+                <a class="text-gray-700 flex items-center" href="#"></a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a class="text-gray-700" href="https://www.facebook.com/siddarth.saxena.7967/"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-gray-700" href="https://twitter.com/Siddhar77817838"><i class="fab fa-twitter"></i></a>
+                <a class="text-gray-700" href="https://www.linkedin.com/in/divyansh-saxena-326456252/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-gray-700" href="https://www.instagram.com/realworld_webcam/"><i class="fab fa-instagram"></i></a>
+                <a class="text-gray-700" href="https://www.youtube.com/channel/UCNYZV0fNd0dizu1p1Gkn3pA"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="sticky top-0 bg-white shadow z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-primary hover:text-primary text-2xl font-bold flex items-center">
+                <i class="fa fa-clinic-medical mr-2"></i>PredictiCare
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="{{ url_for('home') }}" class="hover:text-primary font-bold">Home</a>
+                <a href="{{ url_for('about') }}" class="hover:text-primary font-bold">Our Team</a>
+                <a href="{{ url_for('doctor') }}" class="hover:text-primary font-bold">Doctor</a>
+                <a href="{{ url_for('disease') }}" class="hover:text-primary font-bold">Diseases</a>
+                <a href="{{ url_for('blog_page') }}" class="hover:text-primary font-bold">Why Us</a>
+                <a href="{{ url_for('contact') }}" class="hover:text-primary font-bold">Contact</a>
+            </div>
+
+            <!-- Login / Signup Buttons -->
+            <div class="hidden lg:flex items-center space-x-4">
+                
+                <div id="google_translate_element" class="ml-4"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Hero Section -->
+    <section class="bg-primary text-white text-center py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold">Why Choose Our AI-Powered Health Assistant?</h1>
+            <p class="text-xl mt-4 max-w-2xl mx-auto">We help you detect diseases early using AI, enabling faster treatment and peace of mind.</p>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section id="strengths" class="py-16 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-primary mb-10" data-aos="fade-up">What Makes Us Stand Out?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/accuracy.jpeg?raw=true" alt="AI Accuracy" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800">AI-Powered Accuracy</h3>
+                    <p class="text-gray-600 mt-2">We use deep learning to accurately identify symptoms and predict diseases faster than ever.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/real%20time%20.jpeg?raw=true" alt="Speed" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800">Real-Time Results</h3>
+                    <p class="text-gray-600 mt-2">Receive instant diagnostic reports that help you make better health decisions right away.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/24:7%20avail.jpeg?raw=true" alt="24/7 Support" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-800">24/7 Health Support</h3>
+                    <p class="text-gray-600 mt-2">Our AI assistant is available 24/7 to answer your health questions and guide you step-by-step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Difference Section -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-10" data-aos="fade-up">How We’re Different</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4">AI-Personalized Care</h3>
+                    <p class="text-lg text-gray-100">We understand every patient is unique. Our system adapts and learns based on your history to offer accurate suggestions.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Future-Ready Solutions</h3>
+                    <p class="text-lg text-gray-100">With continuous learning and real-time updates, our AI evolves with the latest medical research and trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-primary mb-10" data-aos="fade-up">Our Users Say</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-sm mx-auto" data-aos="flip-left">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/image1.jpeg?raw=true" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-4">
+                    <p class="text-gray-600">"This app helped detect my condition early. The speed and accuracy gave me a second chance!"</p>
+                    <p class="font-semibold mt-2 text-gray-800">Arjun Verma</p>
+                    <p class="text-gray-500">India</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-sm mx-auto" data-aos="flip-right" data-aos-delay="200">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/person2.jpeg?raw=true" alt="Client" class="w-16 h-16 rounded-full mx-auto mb-4">
+                    <p class="text-gray-600">"Using this AI tool was easier than I expected, and it gave me detailed advice instantly."</p>
+                    <p class="font-semibold mt-2 text-gray-800">Emily Chen</p>
+                    <p class="text-gray-500">Singapore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-10" data-aos="fade-up">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/input%20sysmptoms.jpeg?raw=true" alt="Step 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold">Input Symptoms</h3>
+                    <p>Start by describing your symptoms through our simple form or voice interface.</p>
+                </div>
+                <!-- Step 2 -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/ai%20detection.jpeg?raw=true" alt="Step 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold">AI Diagnosis</h3>
+                    <p>Our system compares your symptoms with medical data to predict possible conditions.</p>
+                </div>
+                <!-- Step 3 -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://github.com/divya-divyanshu/6-4-2025-disease/blob/main/templates/image/recomne.jpeg?raw=true" alt="Step 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold">Get Recommendations</h3>
+                    <p>You receive a clear, customized report and next steps for treatment or consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+        <p>&copy; 2025 AI Disease Detection. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>

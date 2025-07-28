@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Healthcare</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,fr,de,es,ru,zh-CN,ja,ko,it,pt,ar,bn,pa,gu,mr,ta,te,ur,ml,id,th,tr,fa,pl,uk,vi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="font-sans">
+    <!-- Topbar Start -->
+    <div class="hidden lg:block bg-white border-b py-2">
+        <div class="container mx-auto px-4 flex justify-between">
+            <div class="flex items-center space-x-3">
+                <a class="text-gray-700 hover:text-primary flex items-center" href="#"> <i class="fa fa-heartbeat mr-2"></i>YOUR PERSONAL DOCTOR</a>
+                <span class="text-gray-700"></span>
+                <a class="text-gray-700 flex items-center" href="#"></a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a class="text-gray-700" href="https://www.facebook.com/siddarth.saxena.7967/"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-gray-700" href="https://twitter.com/Siddhar77817838"><i class="fab fa-twitter"></i></a>
+                <a class="text-gray-700" href="https://www.linkedin.com/in/divyansh-saxena-326456252/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-gray-700" href="https://www.instagram.com/realworld_webcam/"><i class="fab fa-instagram"></i></a>
+                <a class="text-gray-700" href="https://www.youtube.com/channel/UCNYZV0fNd0dizu1p1Gkn3pA"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="sticky top-0 bg-white shadow z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-primary hover:text-primary text-2xl font-bold flex items-center">
+                <i class="fa fa-clinic-medical mr-2"></i>PredictiCare
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="{{ url_for('home') }}" class="hover:text-primary font-bold">Home</a>
+                <a href="{{ url_for('about') }}" class="hover:text-primary font-bold">Our Team</a>
+                <a href="{{ url_for('doctor') }}" class="hover:text-primary font-bold">Doctor</a>
+                <a href="{{ url_for('disease') }}" class="hover:text-primary font-bold">Diseases</a>
+                <a href="{{ url_for('blog_page') }}" class="hover:text-primary font-bold">Why Us</a>
+                <a href="{{ url_for('contact') }}" class="hover:text-primary font-bold">Contact</a>
+            </div>
+
+            <!-- Login / Signup Buttons -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="./login signup/login.html" class="text-primary font-semibold hover:underline">Login</a>
+                <a href="./login signup/signup.html" class="bg-primary text-white px-4 py-2 rounded-full font-semibold hover:bg-cyan-700 transition duration-300">Sign Up</a>
+                <div id="google_translate_element" class="ml-4"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="lg:w-2/3">
+                <h5 class="uppercase tracking-widest border-b border-white mb-2 inline-block">Welcome to Healthcare</h5>
+                <h1 class="text-5xl font-bold leading-tight mb-6">Easy Detection of Disease at your Home</h1>
+                <div class="space-x-4">
+                    <a href="{{ url_for('disease') }}" class="bg-white text-primary px-6 py-3 rounded-full font-semibold">Find Disease</a>
+                    <a href="{{ url_for('appointment') }}" class="border border-white px-6 py-3 rounded-full font-semibold">Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">About Our Platform</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                Our AI-powered healthcare platform offers intelligent disease detection based on user symptoms. Whether you're experiencing common cold symptoms or something more complex, our system helps guide you toward a potential diagnosis—all from the comfort of your home.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="diseases" class="py-16 bg-gray-100 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Key Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <i class="fas fa-dna text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">AI Symptom Checker</h4>
+                    <p class="text-gray-600">Get quick, data-driven insights from your symptoms.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <i class="fas fa-user-md text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Expert Guidance</h4>
+                    <p class="text-gray-600">Connect with certified professionals.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <i class="fas fa-notes-medical text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Medical Reports</h4>
+                    <p class="text-gray-600">Track symptoms and download diagnostic summaries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="whyus" class="py-16 bg-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Why Choose Us</h2>
+            <ul class="text-gray-600 max-w-2xl mx-auto space-y-4">
+                <li>✔️ Accurate and fast AI diagnosis</li>
+                <li>✔️ Multilingual support in 26+ languages</li>
+                <li>✔️ Secure & confidential user data</li>
+                <li>✔️ Accessible from anywhere, anytime</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-gray-100 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Health Insights</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Get tips, advice, and information about disease prevention, healthy habits, and emerging medical technologies.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-primary text-white py-10 text-center">
+        <div class="container mx-auto px-4">
+            <p class="mb-2">&copy; 2025 Disease Detection System. All Rights Reserved.</p>
+            <p>Contact us: upg02181@gmail.com | +91 9517069607</p>
+        </div>
+    </footer>
+</body>
+
+</html>
